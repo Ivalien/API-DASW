@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Películas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Crear Película</h1>
+        <form id="create-movie-form">
+            <div class="form-group">
+                <label for="name">Título:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="synopsis">Sinopsis:</label>
+                <textarea id="synopsis" name="synopsis" class="form-control" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="genre">Género:</label>
+                <input type="text" id="genre" name="genre" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="duration">Duración (minutos):</label>
+                <input type="number" id="duration" name="duration" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="director">Director:</label>
+                <input type="text" id="director" name="director" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="actors">Actores:</label>
+                <input type="text" id="actors" name="actors" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Crear</button>
+        </form>
+        <div id="success-message" class="alert alert-success mt-3" style="display: none;">
+            Película agregada satisfactoriamente.
+        </div>
+        <div id="error-message" class="alert alert-danger mt-3" style="display: none;">
+            Error al agregar la película.
+        </div>
+        <button id="back-to-list" class="btn btn-secondary mt-3">Volver a la lista de películas</button>
+    </div>
+    <script src="createMovies.js"></script>
+</body>
+
+</html>
